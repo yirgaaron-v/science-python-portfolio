@@ -26,3 +26,9 @@ print("rows read:", len(time_hr))
 
 
 
+def calculated_growth_mean(bacteria_count):
+    totall = 0
+    for x in bacteria_count:
+        totall += x
+    return totall  / len(bacteria_count)
+print(calculated_growth_mean(bacteria_count))
