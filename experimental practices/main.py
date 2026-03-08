@@ -32,3 +32,11 @@ def calculated_growth_mean(bacteria_count):
         totall += x
     return totall  / len(bacteria_count)
 print(calculated_growth_mean(bacteria_count))
+
+def find_above_mean(bacteria_count, mean):
+    above_mean= []
+    for x in bacteria_count:
+        if x > mean :
+            above_mean.append(x)
+    return above_mean
+print(find_above_mean(bacteria_count, calculated_growth_mean(bacteria_count)))
