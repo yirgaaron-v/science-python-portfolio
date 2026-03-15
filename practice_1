@@ -1,0 +1,55 @@
+list = [0,1]
+n = int(input("enter the number of Fibonacci numbers to generate: "))
+for num in range(n):
+  list.append(list[-1] + list[-2])
+print(list)
+
+l1st = input("enter a list of numbers separated by commas: ")
+l1st = l1st.split()
+midpoint = int(len(l1st)/2)
+print(l1st[midpoint])
+
+list = [1,2,3,4,5]
+string = " ".join(str(x) for x in list)
+print(type(string))
+print(string)
+
+list1 = [1,2,3]
+list2 = [4,5,6]
+rest = []
+for x in range(3):
+  rest.append(list1[x] + list2[x])
+print(rest)
+
+string1 = input(str("enter the first string: "))
+string2 = input(str("enter the second string: "))
+
+string1= string1.replace(" ", "").upper()
+string2 = string2.replace(" ", "").upper()
+if sorted (string1) == sorted(string2):
+  print("The strings are anagrams.")
+else:
+  print("The strings are not anagrams.")
+
+word = input(str("enter a word: "))
+forbidden = input(str("enter a string of forbidden characters: "))
+count = 0
+for character in word:
+  if character not in forbidden:
+    count += 1
+print(count)
+
+v_count= 0
+vowels = ['a', 'e', 'i', 'o', 'u']
+for x in word:
+  if x in vowels:
+    v_count += 1
+print(v_count)
+
+word = "programing"
+letter = "g"
+l_count = 0
+for x in word:
+  if x == letter:
+    l_count += 1
+print(l_count)
